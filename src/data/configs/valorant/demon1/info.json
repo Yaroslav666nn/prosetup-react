@@ -1,0 +1,5 @@
+{
+  "id": "demon1", "nickname": "Demon1", "realName": "Max Mazanov", "team": "NRG", "game": "Valorant",
+  "gear": { "mouse": "G-Wolves HTS Plus 4K", "monitor": "ZOWIE XL2566K" },
+  "settings": { "dpi": 1600, "hz": 4000, "resolution": "1920x1080", "sensitivity": 0.1, "edpi": 160 }
+}

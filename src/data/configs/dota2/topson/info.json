@@ -1,0 +1,8 @@
+{
+  "id": "topson", "nickname": "Topson", "realName": "Topias Taavitsainen", "team": "Tundra Esports", "game": "Dota 2",
+  "gear": { "mouse": "SteelSeries Prime Wireless", "monitor": "ZOWIE XL2546K" },
+  "settings": { 
+    "dpi": 800, "resolution": "1920x1080",
+    "keybinds": { "abilities": "Q W E R", "quickcast": true, "items": "Alt+A, Alt+S, Alt+D, Z, X, C", "camera": "Camera Grip" }
+  }
+}

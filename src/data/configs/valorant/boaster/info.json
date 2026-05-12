@@ -1,0 +1,5 @@
+{
+  "id": "boaster", "nickname": "Boaster", "realName": "Jake Howlett", "team": "Fnatic", "game": "Valorant",
+  "gear": { "mouse": "Logitech G Pro X Superlight", "monitor": "ZOWIE XL2566K" },
+  "settings": { "dpi": 400, "hz": 1000, "resolution": "1920x1080", "sensitivity": 0.52, "edpi": 208 }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "yatoro", "nickname": "Yatoro", "realName": "Illya Mulyarchuk", "team": "Team Spirit", "game": "Dota 2",
+  "gear": { "mouse": "Logitech G Pro X Superlight 2", "monitor": "ZOWIE XL2566K" },
+  "settings": { 
+    "dpi": 800, "resolution": "1920x1080",
+    "keybinds": { "abilities": "Q W E R", "quickcast": true, "items": "Mouse 4, Mouse 5, Space, C, V, B", "camera": "Edge Pan" }
+  }
+}

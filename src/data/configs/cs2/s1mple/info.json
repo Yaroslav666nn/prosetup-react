@@ -1,0 +1,5 @@
+{
+  "id": "s1mple", "nickname": "s1mple", "realName": "Oleksandr Kostyliev", "team": "BC.Game Esports", "game": "CS2",
+  "gear": { "mouse": "Logitech G Pro X Superlight 2", "monitor": "ZOWIE XL2586X+" },
+  "settings": { "dpi": 400, "hz": 2000, "resolution": "1280x960" }
+}
