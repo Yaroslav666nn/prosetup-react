@@ -1,0 +1,32 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  
+  .th {
+    text-align: left;
+    padding: 15px;
+    background-color: var(--color-border);
+    color: var(--color-primary);
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .td {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-main);
+  }
+  
+  .tr:hover {
+    background-color: rgb(255 255 255 / 5%);
+  }

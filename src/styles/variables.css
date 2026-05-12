@@ -1,0 +1,21 @@
+:root {
+    --color-bg: #0b0e11;
+    --color-surface: #15191c;
+    --color-primary: #00ff87; 
+    --color-secondary: #848d95;
+    --color-text-main: #fff;
+    --color-text-muted: #9ca3af;
+    --color-border: #2d333b;
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --transition-fast: 0.2s ease;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+  }
