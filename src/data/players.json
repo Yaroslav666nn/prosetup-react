@@ -1,0 +1,330 @@
+[
+  {
+    "id": "b1t",
+    "nickname": "b1t",
+    "realName": "Valerij Vakhovsjkyj",
+    "team": "NAVI",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 1000,
+      "resolution": "1280x960",
+      "sensitivity": 1,
+      "zoomSens": null,
+      "edpi": 400
+    }
+  },
+  {
+    "id": "donk",
+    "nickname": "donk",
+    "realName": "Danil Kryshkovets",
+    "team": "Team Spirit",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2586X+"
+    },
+    "settings": {
+      "dpi": 800,
+      "hz": 1000,
+      "resolution": "1280x960",
+      "sensitivity": 1,
+      "zoomSens": null,
+      "edpi": 800
+    }
+  },
+  {
+    "id": "monesy",
+    "nickname": "m0NESY",
+    "realName": "Ilya Osipov",
+    "team": "Team Falcons",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight 2",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 2000,
+      "resolution": "1280x960",
+      "sensitivity": 2.3,
+      "zoomSens": null,
+      "edpi": 920
+    }
+  },
+  {
+    "id": "niko",
+    "nickname": "NiKo",
+    "realName": "Nikola Kovač",
+    "team": "Team Falcons",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Razer DeathAdder V3 Pro",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 4000,
+      "resolution": "1280x960",
+      "sensitivity": 1,
+      "zoomSens": null,
+      "edpi": 400
+    }
+  },
+  {
+    "id": "ropz",
+    "nickname": "ropz",
+    "realName": "Robin Kool",
+    "team": "Team Vitality",
+    "game": "CS2",
+    "gear": {
+      "mouse": "ZOWIE EC2-CW",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 1000,
+      "resolution": "1920x1080",
+      "sensitivity": 1.77,
+      "zoomSens": null,
+      "edpi": 708
+    }
+  },
+  {
+    "id": "s1mple",
+    "nickname": "s1mple",
+    "realName": "Oleksandr Kostyliev",
+    "team": "BC.Game Esports",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight 2",
+      "monitor": "ZOWIE XL2586X+"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 2000,
+      "resolution": "1280x960",
+      "sensitivity": 1,
+      "zoomSens": 1,
+      "edpi": 400
+    }
+  },
+  {
+    "id": "zywoo",
+    "nickname": "ZywOo",
+    "realName": "Mathieu Herbaut",
+    "team": "Team Vitality",
+    "game": "CS2",
+    "gear": {
+      "mouse": "Vaxee Outset AX",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 1000,
+      "resolution": "1280x960",
+      "sensitivity": 1,
+      "zoomSens": 0.8,
+      "edpi": 400
+    }
+  },
+  {
+    "id": "atf",
+    "nickname": "ATF",
+    "realName": "Ammar Al-Assaf",
+    "team": "Team Falcons",
+    "game": "Dota 2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "resolution": "1920x1080",
+      "keybinds": {
+        "abilities": "Legacy",
+        "quickcast": false,
+        "items": "1, 2, 3, 4, 5, 6",
+        "camera": "Edge Pan"
+      }
+    }
+  },
+  {
+    "id": "nisha",
+    "nickname": "Nisha",
+    "realName": "Michał Jankowski",
+    "team": "Team Liquid",
+    "game": "Dota 2",
+    "gear": {
+      "mouse": "Razer DeathAdder V3 Pro",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "resolution": "1920x1080",
+      "keybinds": {
+        "abilities": "Q W E R",
+        "quickcast": false,
+        "items": "Alt+Q, Alt+W, Alt+E, 1, 2, 3",
+        "camera": "Edge Pan"
+      }
+    }
+  },
+  {
+    "id": "quinn",
+    "nickname": "Quinn",
+    "realName": "Quinn Callahan",
+    "team": "Gaimin Gladiators",
+    "game": "Dota 2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2546K"
+    },
+    "settings": {
+      "dpi": 400,
+      "resolution": "1920x1080",
+      "keybinds": {
+        "abilities": "Q W E R",
+        "quickcast": true,
+        "items": "Z, X, C, V, B, Space",
+        "camera": "Camera Grip"
+      }
+    }
+  },
+  {
+    "id": "topson",
+    "nickname": "Topson",
+    "realName": "Topias Taavitsainen",
+    "team": "Tundra Esports",
+    "game": "Dota 2",
+    "gear": {
+      "mouse": "SteelSeries Prime Wireless",
+      "monitor": "ZOWIE XL2546K"
+    },
+    "settings": {
+      "dpi": 800,
+      "resolution": "1920x1080",
+      "keybinds": {
+        "abilities": "Q W E R",
+        "quickcast": true,
+        "items": "Alt+A, Alt+S, Alt+D, Z, X, C",
+        "camera": "Camera Grip"
+      }
+    }
+  },
+  {
+    "id": "yatoro",
+    "nickname": "Yatoro",
+    "realName": "Illya Mulyarchuk",
+    "team": "Team Spirit",
+    "game": "Dota 2",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight 2",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "resolution": "1920x1080",
+      "keybinds": {
+        "abilities": "Q W E R",
+        "quickcast": true,
+        "items": "Mouse 4, Mouse 5, Space, C, V, B",
+        "camera": "Edge Pan"
+      }
+    }
+  },
+  {
+    "id": "aspas",
+    "nickname": "aspas",
+    "realName": "Erick Santos",
+    "team": "Leviathan",
+    "game": "Valorant",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight 2",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "hz": 2000,
+      "resolution": "1920x1080",
+      "sensitivity": 0.4,
+      "edpi": 320
+    }
+  },
+  {
+    "id": "boaster",
+    "nickname": "Boaster",
+    "realName": "Jake Howlett",
+    "team": "Fnatic",
+    "game": "Valorant",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 400,
+      "hz": 1000,
+      "resolution": "1920x1080",
+      "sensitivity": 0.52,
+      "edpi": 208
+    }
+  },
+  {
+    "id": "demon1",
+    "nickname": "Demon1",
+    "realName": "Max Mazanov",
+    "team": "NRG",
+    "game": "Valorant",
+    "gear": {
+      "mouse": "G-Wolves HTS Plus 4K",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 1600,
+      "hz": 4000,
+      "resolution": "1920x1080",
+      "sensitivity": 0.1,
+      "edpi": 160
+    }
+  },
+  {
+    "id": "tenz",
+    "nickname": "TenZ",
+    "realName": "Tyson Ngo",
+    "team": "Sentinels",
+    "game": "Valorant",
+    "gear": {
+      "mouse": "Endgame Gear OP1 8k",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "hz": 1000,
+      "resolution": "1920x1080",
+      "sensitivity": 0.3,
+      "edpi": 240
+    }
+  },
+  {
+    "id": "yay",
+    "nickname": "yay",
+    "realName": "Jaccob Whiteaker",
+    "team": "Bleed",
+    "game": "Valorant",
+    "gear": {
+      "mouse": "Logitech G Pro X Superlight",
+      "monitor": "ZOWIE XL2566K"
+    },
+    "settings": {
+      "dpi": 800,
+      "hz": 1000,
+      "resolution": "1920x1080",
+      "sensitivity": 0.27,
+      "edpi": 216
+    }
+  }
+]

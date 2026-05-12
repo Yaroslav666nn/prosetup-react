@@ -1,0 +1,5 @@
+{
+  "id": "tenz", "nickname": "TenZ", "realName": "Tyson Ngo", "team": "Sentinels", "game": "Valorant",
+  "gear": { "mouse": "Endgame Gear OP1 8k", "monitor": "ZOWIE XL2566K" },
+  "settings": { "dpi": 800, "hz": 1000, "resolution": "1920x1080", "sensitivity": 0.3, "edpi": 240 }
+}

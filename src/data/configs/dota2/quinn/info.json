@@ -1,0 +1,8 @@
+{
+  "id": "quinn", "nickname": "Quinn", "realName": "Quinn Callahan", "team": "Gaimin Gladiators", "game": "Dota 2",
+  "gear": { "mouse": "Logitech G Pro X Superlight", "monitor": "ZOWIE XL2546K" },
+  "settings": { 
+    "dpi": 400, "resolution": "1920x1080",
+    "keybinds": { "abilities": "Q W E R", "quickcast": true, "items": "Z, X, C, V, B, Space", "camera": "Camera Grip" }
+  }
+}

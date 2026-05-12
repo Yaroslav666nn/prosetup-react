@@ -1,0 +1,5 @@
+{
+  "id": "aspas", "nickname": "aspas", "realName": "Erick Santos", "team": "Leviathan", "game": "Valorant",
+  "gear": { "mouse": "Logitech G Pro X Superlight 2", "monitor": "ZOWIE XL2566K" },
+  "settings": { "dpi": 800, "hz": 2000, "resolution": "1920x1080", "sensitivity": 0.4, "edpi": 320 }
+}

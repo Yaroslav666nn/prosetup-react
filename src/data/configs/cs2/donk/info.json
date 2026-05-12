@@ -1,0 +1,5 @@
+{
+  "id": "donk", "nickname": "donk", "realName": "Danil Kryshkovets", "team": "Team Spirit", "game": "CS2",
+  "gear": { "mouse": "Logitech G Pro X Superlight", "monitor": "ZOWIE XL2586X+" },
+  "settings": { "dpi": 800, "hz": 1000, "resolution": "1280x960" }
+}

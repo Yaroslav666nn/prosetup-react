@@ -1,0 +1,5 @@
+{
+  "id": "niko", "nickname": "NiKo", "realName": "Nikola Kovač", "team": "Team Falcons", "game": "CS2",
+  "gear": { "mouse": "Razer DeathAdder V3 Pro", "monitor": "ZOWIE XL2566K" },
+  "settings": { "dpi": 400, "hz": 4000, "resolution": "1280x960" }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "atf", "nickname": "ATF", "realName": "Ammar Al-Assaf", "team": "Team Falcons", "game": "Dota 2",
+  "gear": { "mouse": "Logitech G Pro X Superlight", "monitor": "ZOWIE XL2566K" },
+  "settings": { 
+    "dpi": 800, "resolution": "1920x1080",
+    "keybinds": { "abilities": "Legacy", "quickcast": false, "items": "1, 2, 3, 4, 5, 6", "camera": "Edge Pan" }
+  }
+}
