@@ -1,0 +1,26 @@
+.player-row:hover {
+  background-color: rgb(0 255 135 / 5%);
+  cursor: pointer;
+}
+
+.cell {
+  padding: 15px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+.nick-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.real-name {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
