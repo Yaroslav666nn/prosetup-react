@@ -2,31 +2,26 @@
     width: 100%;
     overflow-x: auto;
     margin-top: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: rgb(21 25 28 / 72%);
+    box-shadow: var(--shadow-md);
   }
   
   .table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--color-surface);
-    border-radius: var(--radius-md);
+    background-color: transparent;
+    border-radius: 18px;
     overflow: hidden;
   }
   
   .th {
     text-align: left;
-    padding: 15px;
-    background-color: var(--color-border);
+    padding: 16px 18px;
+    background-color: rgb(255 255 255 / 4%);
     color: var(--color-primary);
     font-size: 14px;
     text-transform: uppercase;
-  }
-  
-  .td {
-    padding: 15px;
-    border-bottom: 1px solid var(--color-border);
-    color: var(--color-text-main);
-  }
-  
-  .tr:hover {
-    background-color: rgb(255 255 255 / 5%);
+    white-space: nowrap;
   }

@@ -11,9 +11,21 @@ const OUTPUT_FILE = path.join(__dirname, 'players.json');
 console.log('🚀 Запуск агрегатора конфігів...');
 
 function extractFromCfg(cfgText, key) {
-  const regex = new RegExp(`${key}\\s+["']?([0-9.]+)["']?`, 'i');
+  const regex = new RegExp(`(?:^|\\n)${key}\\s+["']?([0-9.]+)["']?`, 'i');
   const match = cfgText.match(regex);
   return match ? parseFloat(match[1]) : null;
+}
+
+function extractFirstFromCfg(cfgText, keys) {
+  for (const key of keys) {
+    const value = extractFromCfg(cfgText, key);
+
+    if (value !== null) {
+      return value;
+    }
+  }
+
+  return null;
 }
 
 const playersList = [];
@@ -37,18 +49,20 @@ gameFolders.forEach((gameName) => {
         const infoPath = path.join(folderPath, 'info.json');
         const cfgPath = path.join(folderPath, 'config.cfg');
 
-        let playerData = {};
-        if (fs.existsSync(infoPath)) {
-          playerData = JSON.parse(fs.readFileSync(infoPath, 'utf-8'));
-        } else {
+        if (!fs.existsSync(infoPath)) {
           return; // Пропускаємо, якщо немає info.json
         }
+
+        const playerData = JSON.parse(fs.readFileSync(infoPath, 'utf-8'));
 
         // Парсимо config.cfg, якщо він існує (актуально для CS2)
         if (fs.existsSync(cfgPath)) {
           const cfgContent = fs.readFileSync(cfgPath, 'utf-8');
           const sensitivity = extractFromCfg(cfgContent, 'sensitivity');
-          const zoomSens = extractFromCfg(cfgContent, 'zoom_sensitivity_ratio');
+          const zoomSens = extractFirstFromCfg(cfgContent, [
+            'zoom_sensitivity_ratio',
+            'zoom_sensitivity_ratio_mouse',
+          ]);
 
           if (!playerData.settings) playerData.settings = {};
           playerData.settings.sensitivity = sensitivity;

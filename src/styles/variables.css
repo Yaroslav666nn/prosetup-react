@@ -2,6 +2,7 @@
     --color-bg: #0b0e11;
     --color-surface: #15191c;
     --color-primary: #00ff87; 
+    --color-lava: #ff5c1c;
     --color-secondary: #848d95;
     --color-text-main: #fff;
     --color-text-muted: #9ca3af;
@@ -9,6 +10,9 @@
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
     --radius-sm: 4px;
     --radius-md: 8px;
+    --shadow-sm: 0 12px 30px rgb(0 0 0 / 18%);
+    --shadow-md: 0 18px 50px rgb(0 0 0 / 24%);
+    --shadow-lg: 0 28px 80px rgb(0 0 0 / 32%);
     --transition-fast: 0.2s ease;
   }
   

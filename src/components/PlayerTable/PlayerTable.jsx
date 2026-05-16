@@ -2,7 +2,7 @@ import styles from './PlayerTable.module.css';
 import playersData from '../../data/players.json';
 import PlayerCard from '../PlayerCard/PlayerCard';
 
-const PlayerTable = () => {
+const PlayerTable = ({ players = playersData }) => {
   return (
     <div className={styles['table-container']}>
       <table className={styles.table}>
@@ -16,7 +16,7 @@ const PlayerTable = () => {
           </tr>
         </thead>
         <tbody>
-          {playersData.map((player) => (
+          {players.map((player) => (
             <PlayerCard key={player.id} player={player} />
           ))}
         </tbody>

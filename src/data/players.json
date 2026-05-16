@@ -13,9 +13,9 @@
       "dpi": 400,
       "hz": 1000,
       "resolution": "1280x960",
-      "sensitivity": 1,
-      "zoomSens": null,
-      "edpi": 400
+      "sensitivity": 1.65,
+      "zoomSens": 1,
+      "edpi": 660
     }
   },
   {
@@ -32,9 +32,9 @@
       "dpi": 800,
       "hz": 1000,
       "resolution": "1280x960",
-      "sensitivity": 1,
+      "sensitivity": 1.25,
       "zoomSens": null,
-      "edpi": 800
+      "edpi": 1000
     }
   },
   {
@@ -70,9 +70,9 @@
       "dpi": 400,
       "hz": 4000,
       "resolution": "1280x960",
-      "sensitivity": 1,
+      "sensitivity": 0.9,
       "zoomSens": null,
-      "edpi": 400
+      "edpi": 360
     }
   },
   {
@@ -108,9 +108,9 @@
       "dpi": 400,
       "hz": 2000,
       "resolution": "1280x960",
-      "sensitivity": 1,
+      "sensitivity": 3.09,
       "zoomSens": 1,
-      "edpi": 400
+      "edpi": 1236
     }
   },
   {
@@ -127,9 +127,9 @@
       "dpi": 400,
       "hz": 1000,
       "resolution": "1280x960",
-      "sensitivity": 1,
+      "sensitivity": 2,
       "zoomSens": 0.8,
-      "edpi": 400
+      "edpi": 800
     }
   },
   {
