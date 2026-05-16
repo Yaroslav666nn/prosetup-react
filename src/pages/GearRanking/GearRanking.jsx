@@ -1,11 +1,26 @@
+import { useMemo, useState } from 'react';
 import styles from './GearRanking.module.css';
 import playersData from '../../data/players.json';
 
+const games = ['CS2', 'Valorant', 'Dota 2'];
+
 const GearRanking = () => {
-  const getStats = (category) => {
+  const [selectedGame, setSelectedGame] = useState('CS2');
+
+  const selectedPlayers = useMemo(
+    () => playersData.filter((player) => player.game === selectedGame),
+    [selectedGame],
+  );
+
+  const getStats = (category, players = selectedPlayers) => {
     const counts = {};
-    playersData.forEach(player => {
+    players.forEach(player => {
       const item = player.gear[category];
+
+      if (!item) {
+        return;
+      }
+
       counts[item] = (counts[item] || 0) + 1;
     });
 
@@ -13,55 +28,116 @@ const GearRanking = () => {
       .map(([name, count]) => ({
         name,
         count,
-        percentage: Math.round((count / playersData.length) * 100)
+        percentage: Math.round((count / players.length) * 100)
       }))
       .sort((a, b) => b.count - a.count)
       .slice(0, 5);
   };
 
-  const getAverage = (path) => {
-    const sum = playersData.reduce((acc, player) => acc + player.settings[path], 0);
-    return (sum / playersData.length).toFixed(2);
+  const getAverage = (path, players = selectedPlayers) => {
+    const values = players
+      .map((player) => player.settings[path])
+      .filter((value) => typeof value === 'number');
+
+    if (values.length === 0) {
+      return '—';
+    }
+
+    const sum = values.reduce((acc, value) => acc + value, 0);
+    return (sum / values.length).toFixed(2);
   };
 
-  const getMostPopular = (path) => {
+  const getMostPopular = (path, players = selectedPlayers) => {
     const counts = {};
-    playersData.forEach(p => {
+    players.forEach(p => {
       const val = p.settings[path];
+      if (val === undefined || val === null) {
+        return;
+      }
+
       counts[val] = (counts[val] || 0) + 1;
     });
-    return Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+
+    return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—';
+  };
+
+  const getMostPopularKeybind = (path) => {
+    const counts = {};
+
+    selectedPlayers.forEach((player) => {
+      const val = player.settings.keybinds?.[path];
+
+      if (val === undefined || val === null) {
+        return;
+      }
+
+      counts[String(val)] = (counts[String(val)] || 0) + 1;
+    });
+
+    return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—';
+  };
+
+  const getQuickcastPercentage = () => {
+    const dotaPlayers = selectedPlayers.filter((player) => player.settings.keybinds);
+
+    if (dotaPlayers.length === 0) {
+      return '—';
+    }
+
+    const quickcastUsers = dotaPlayers.filter((player) => player.settings.keybinds.quickcast).length;
+    return `${Math.round((quickcastUsers / dotaPlayers.length) * 100)}%`;
   };
 
   const topMice = getStats('mouse');
   const topMonitors = getStats('monitor');
-  const avgSens = getAverage('sensitivity');
-  const avgEdpi = getAverage('edpi');
-  const commonRes = getMostPopular('resolution');
-  const commonHz = getMostPopular('hz');
+  const isDota = selectedGame === 'Dota 2';
+
+  const statCards = isDota
+    ? [
+        { value: getAverage('dpi'), label: 'Середній DPI' },
+        { value: getQuickcastPercentage(), label: 'Quickcast гравців' },
+        { value: getMostPopularKeybind('camera'), label: 'Популярна камера' },
+        { value: getMostPopular('resolution'), label: 'Популярна резолюція' },
+      ]
+    : [
+        { value: getAverage('sensitivity'), label: 'Сер. sensitivity' },
+        { value: getAverage('edpi'), label: 'Середній eDPI' },
+        { value: getMostPopular('resolution'), label: 'Популярна резолюція' },
+        { value: `${getMostPopular('hz')}Hz`, label: 'Стандарт частоти' },
+      ];
 
   return (
     <div className={styles['ranking-container']}>
-      <h1 className={styles.title}>Рейтинг девайсів</h1>
-      <p className={styles.subtitle}>Аналітика вибору професійних гравців</p>
+      <section className={styles.hero}>
+        <span className={styles.eyebrow}>Gear analytics</span>
+        <h1 className={styles.title}>Рейтинг девайсів</h1>
+        <p className={styles.subtitle}>Аналітика вибору професійних гравців з локальної бази ProSetup</p>
+      </section>
+
+      <div className={styles.gameTabs} aria-label="Фільтр аналітики за грою">
+        {games.map((game) => (
+          <button
+            key={game}
+            className={game === selectedGame ? styles.activeTab : styles.tab}
+            type="button"
+            onClick={() => setSelectedGame(game)}
+          >
+            {game}
+          </button>
+        ))}
+      </div>
+
+      <p className={styles.scopeNote}>
+        Показано {selectedPlayers.length} профілів. Метрики рахуються тільки для {selectedGame}, без змішування різних ігор.
+      </p>
 
       <div className={styles['stats-grid']}>
-        <div className={styles['stat-card']}>
-          <span className={styles['stat-value']}>{avgSens}</span>
-          <span className={styles['stat-label']}>Сер. Sensitivity</span>
-        </div>
-        <div className={styles['stat-card']}>
-          <span className={styles['stat-value']}>{avgEdpi}</span>
-          <span className={styles['stat-label']}>Середній eDPI</span>
-        </div>
-        <div className={styles['stat-card']}>
-          <span className={styles['stat-value']}>{commonRes}</span>
-          <span className={styles['stat-label']}>Популярна Резолюція</span>
-        </div>
-        <div className={styles['stat-card']}>
-          <span className={styles['stat-value']}>{commonHz}Hz</span>
-          <span className={styles['stat-label']}>Стандарт частоти</span>
-        </div>
+        {statCards.map((card) => (
+          <div key={card.label} className={styles['stat-card']}>
+            <span className={styles['stat-value']}>{card.value}</span>
+            <span className={styles['stat-label']}>{card.label}</span>
+          </div>
+        ))}
       </div>
 
       <section className={styles.section}>

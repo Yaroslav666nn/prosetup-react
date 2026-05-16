@@ -1,114 +1,131 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgb(170 59 255 / 10%);
-  --accent-border: rgb(170 59 255 / 50%);
-  --social-bg: rgb(244 243 236 / 50%);
-  --shadow:
-    rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 5%) 0 4px 6px -2px;
-  --sans: system-ui, 'Segoe UI', roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', roboto, sans-serif;
-  --mono: ui-monospace, consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (width <= 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgb(192 132 252 / 15%);
-    --accent-border: rgb(192 132 252 / 50%);
-    --social-bg: rgb(47 48 58 / 50%);
-    --shadow:
-      rgb(0 0 0 / 40%) 0 10px 15px -3px, rgb(0 0 0 / 25%) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+* {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+html {
+  min-width: 320px;
+  background: var(--color-bg);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-
-  @media (width <= 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-
-  @media (width <= 1024px) {
-    font-size: 20px;
-  }
-}
-
-p {
+body {
+  min-width: 320px;
+  min-height: 100vh;
   margin: 0;
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+  background:
+    radial-gradient(circle at 10% 8%, rgb(0 255 135 / 10%), transparent 26vw),
+    radial-gradient(circle at 88% 18%, rgb(255 92 28 / 12%), transparent 28vw),
+    radial-gradient(circle at 48% 72%, rgb(0 170 255 / 7%), transparent 30vw),
+    linear-gradient(180deg, #0b0e11 0%, #101418 48%, #0b0e11 100%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  width: 460px;
+  height: 460px;
+  border-radius: 42% 58% 64% 36%;
+  filter: blur(22px);
+  opacity: 0.2;
+  pointer-events: none;
+  animation: pageLava 18s ease-in-out infinite alternate;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+body::before {
+  top: 10%;
+  left: -140px;
+  background: var(--color-primary);
+}
+
+body::after {
+  right: -170px;
+  bottom: 8%;
+  background: var(--color-lava);
+  animation-delay: -7s;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  letter-spacing: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-container {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container::before,
+.app-container::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  border-radius: 58% 42% 50% 50%;
+  filter: blur(28px);
+  opacity: 0.13;
+  pointer-events: none;
+  animation: secondaryLava 22s ease-in-out infinite alternate;
+}
+
+.app-container::before {
+  top: 42%;
+  left: 22%;
+  background: #1affb2;
+}
+
+.app-container::after {
+  right: 24%;
+  bottom: 18%;
+  background: #ff375f;
+  animation-delay: -11s;
+}
+
+.app-main {
+  flex: 1;
+}
+
+::selection {
+  background: rgb(0 255 135 / 28%);
+  color: var(--color-text-main);
+}
+
+@keyframes pageLava {
+  from {
+    border-radius: 42% 58% 64% 36%;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.9);
+  }
+
+  to {
+    border-radius: 63% 37% 46% 54%;
+    transform: translate3d(86px, -54px, 0) rotate(34deg) scale(1.12);
+  }
+}
+
+@keyframes secondaryLava {
+  from {
+    border-radius: 58% 42% 50% 50%;
+    transform: translate3d(-28px, 24px, 0) rotate(0deg) scale(0.92);
+  }
+
+  to {
+    border-radius: 37% 63% 58% 42%;
+    transform: translate3d(48px, -38px, 0) rotate(-24deg) scale(1.15);
+  }
 }
