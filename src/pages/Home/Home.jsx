@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import NewsFeed from '../../components/NewsFeed/NewsFeed';
 import PlayerTable from '../../components/PlayerTable/PlayerTable';
 import playersData from '../../data/players.json';
 import styles from './Home.module.css';
@@ -37,6 +38,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <NewsFeed />
 
       <section className={styles.toolbar}>
         <div>
