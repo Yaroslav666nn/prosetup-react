@@ -101,14 +101,6 @@ const NewsFeed = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {/* Додано блок для картинки (заглушки) */}
-                  <div className={styles.imageWrapper}>
-                     <img 
-                       src="https://img.icons8.com/?size=100&id=42861&format=png&color=000000" 
-                       alt="News icon" 
-                       className={styles.newsIcon}
-                     />
-                  </div>
                   
                   <div className={styles.newsContent}>
                     <span className={styles.title}>{article.title}</span>

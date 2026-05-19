@@ -4,6 +4,9 @@ import playersData from '../../data/players.json';
 
 const games = ['CS2', 'Valorant', 'Dota 2'];
 
+// DPI used for sensitivity normalization/display
+const STANDARD_DPI = 800;
+
 const GearRanking = () => {
   const [selectedGame, setSelectedGame] = useState('CS2');
 
@@ -35,6 +38,32 @@ const GearRanking = () => {
   };
 
   const getAverage = (path, players = selectedPlayers) => {
+    // Special handling for sensitivity: normalize by DPI (use 800 as standard)
+    if (path === 'sensitivity') {
+      const STANDARD_DPI = 800;
+      const normValues = players
+        .map((player) => {
+          const dpi = player.settings?.dpi;
+          const sens = player.settings?.sensitivity;
+          const edpi = player.settings?.edpi;
+
+          if (typeof dpi === 'number' && typeof sens === 'number') {
+            return (sens * dpi) / STANDARD_DPI; // convert to sensitivity at STANDARD_DPI
+          }
+
+          if (typeof edpi === 'number') {
+            return edpi / STANDARD_DPI; // convert eDPI to sensitivity at STANDARD_DPI
+          }
+
+          return null;
+        })
+        .filter((v) => typeof v === 'number');
+
+      if (normValues.length === 0) return '—';
+      const sum = normValues.reduce((a, b) => a + b, 0);
+      return (sum / normValues.length).toFixed(2);
+    }
+
     const values = players
       .map((player) => player.settings[path])
       .filter((value) => typeof value === 'number');
@@ -100,7 +129,7 @@ const GearRanking = () => {
         { value: getMostPopular('resolution'), label: 'Популярна резолюція' },
       ]
     : [
-        { value: getAverage('sensitivity'), label: 'Сер. sensitivity' },
+        { value: getAverage('sensitivity'), label: `Сер. sensitivity (${STANDARD_DPI} DPI)` },
         { value: getAverage('edpi'), label: 'Середній eDPI' },
         { value: getMostPopular('resolution'), label: 'Популярна резолюція' },
         { value: `${getMostPopular('hz')}Hz`, label: 'Стандарт частоти' },

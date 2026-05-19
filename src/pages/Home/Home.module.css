@@ -165,7 +165,9 @@
   color: var(--color-text-muted);
   font: inherit;
   font-weight: 800;
-  cursor: pointer;
+  /* Робимо вигляд нейтральним (не як клікабельна кнопка) */
+  cursor: default;
+  user-select: none;
 }
 
 .filter {
@@ -173,8 +175,10 @@
 }
 
 .activeFilter {
-  background: var(--color-primary);
-  color: #06100b;
+  /* Виділення є, але без яскравих кнопкових стилів */
+  background: transparent;
+  color: var(--color-text-main);
+  border-color: transparent;
 }
 
 @keyframes lavaMove {

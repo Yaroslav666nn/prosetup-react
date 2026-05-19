@@ -42,7 +42,7 @@ const Header = () => {
       <Link to="/" className={styles.logo}>ProSetup</Link>
       
       <nav className={styles.nav}>
-        <Link to="/" className={styles['nav-link']}>Гравці</Link>
+        <Link to="/players" className={styles['nav-link']}>Гравці</Link>
         <Link to="/ranking" className={styles['nav-link']}>Рейтинг девайсів</Link>
       </nav>
       

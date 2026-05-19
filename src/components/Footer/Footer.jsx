@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 const productLinks = [
-  'Профілі гравців',
-  'Пошук по базі',
-  'Gear ranking',
-  'CS2 cfg download',
+  { label: 'Профілі гравців', to: '/players' },
+  { label: 'Пошук по базі', to: '/' },
+  { label: 'Gear ranking', to: '/ranking' },
+  { label: 'CS2 cfg download', to: '/' },
 ];
 
 const games = ['CS2', 'Valorant', 'Dota 2'];
@@ -35,14 +35,14 @@ const Footer = () => {
       <div className={styles.footerColumn}>
         <h3>Product</h3>
         {productLinks.map((item) => (
-          <span key={item}>{item}</span>
+          <Link key={item.to} to={item.to}>{item.label}</Link>
         ))}
       </div>
 
       <div className={styles.footerColumn}>
         <h3>Games</h3>
         {games.map((game) => (
-          <span key={game}>{game}</span>
+          <Link key={game} to={`/players?game=${encodeURIComponent(game)}`}>{game}</Link>
         ))}
       </div>
 
