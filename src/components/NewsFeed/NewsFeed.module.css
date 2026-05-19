@@ -39,9 +39,7 @@
   color: var(--color-primary);
   font-weight: 800;
   text-decoration: none;
-  transition:
-    background var(--transition-fast),
-    color var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .viewAll:hover {
@@ -63,15 +61,44 @@
   background: rgb(255 255 255 / 4%);
 }
 
+/* ОНОВЛЕНО: Тепер тут 2 колонки (Іконка зліва, весь текст справа) */
 .link {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 18px;
   align-items: center;
   min-height: 64px;
   padding: 14px 16px;
   color: var(--color-text-main);
   text-decoration: none;
+}
+
+/* НОВЕ: Стилі для іконки (зроблені у вашому фірмовому стилі з прозорістю) */
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 8px;
+}
+
+.newsIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  /* Робимо іконку білою, щоб вона не вибивалася з темного дизайну */
+  filter: invert(1) opacity(0.8); 
+}
+
+/* НОВЕ: Повертаємо твій ідеальний розклад (Заголовок тягнеться, Дата притиснута вправо) */
+.newsContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
 }
 
 .link:hover .title {
@@ -93,6 +120,29 @@
   white-space: nowrap;
 }
 
+/* НОВЕ: Кнопка "Показати більше" гармонійно вписана під списком */
+.loadMoreBtn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  background: rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 8px;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.loadMoreBtn:hover {
+  background: var(--color-primary);
+  color: #06100b;
+}
+
 .state,
 .error {
   margin: 0;
@@ -106,6 +156,7 @@
   color: #ffb4a2;
 }
 
+/* ОНОВЛЕНО: Адаптив під мобілки */
 @media (max-width: 720px) {
   .newsFeed {
     padding: 18px;
@@ -117,11 +168,17 @@
   }
 
   .link {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+
+  .newsContent {
+    grid-template-columns: 1fr; /* Заголовок і дата стають один під одним */
+    gap: 6px;
   }
 
   .date {
     white-space: normal;
   }
 }
+  
