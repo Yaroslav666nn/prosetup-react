@@ -193,8 +193,8 @@ const PlayerProfile = () => {
                 <span className={styles['setting-value']}>{renderValue(settings.edpi)}</span>
               </div>
               <div className={styles['setting-row']}>
-                <span className={styles['setting-label']}>Zoom Sens</span>
-                <span className={styles['setting-value']}>{renderValue(settings.zoomSens)}</span>
+                <span className={styles['setting-label']}>Частота (Hz)</span>
+                <span className={styles['setting-value']}>{renderValue(videoProfile.hz)}</span>
               </div>
             </>
           )}
@@ -206,10 +206,6 @@ const PlayerProfile = () => {
           <div className={styles['setting-row']}>
             <span className={styles['setting-label']}>Роздільна здатність</span>
             <span className={styles['setting-value']}>{videoProfile.resolution}</span>
-          </div>
-          <div className={styles['setting-row']}>
-            <span className={styles['setting-label']}>Частота (Hz)</span>
-            <span className={styles['setting-value']}>{renderValue(videoProfile.hz)}</span>
           </div>
           <div className={styles['setting-row']}>
             <span className={styles['setting-label']}>Aspect Ratio</span>

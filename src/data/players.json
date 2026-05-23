@@ -68,7 +68,7 @@
     },
     "settings": {
       "dpi": 400,
-      "hz": 4000,
+      "hz": 2000,
       "resolution": "1280x960",
       "sensitivity": 0.9,
       "zoomSens": null,
