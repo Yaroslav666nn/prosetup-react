@@ -1,11 +1,25 @@
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 const { HLTV } = require('hltv');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const distPath = path.join(__dirname, '..', 'dist');
+const indexPath = path.join(distPath, 'index.html');
+const hasClientBuild = fs.existsSync(indexPath);
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+if (process.env.CORS_ORIGIN) {
+  const allowedOrigins = process.env.CORS_ORIGIN
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
+  app.use(cors({ origin: allowedOrigins }));
+} else if (process.env.NODE_ENV !== 'production') {
+  app.use(cors({ origin: 'http://localhost:5173' }));
+}
 
 // Змінні для кешування
 let cachedNews = [];
@@ -45,6 +59,17 @@ app.get('/api/news', async (req, res) => {
   }
 });
 
+if (hasClientBuild) {
+  app.use(express.static(distPath));
+
+  app.get(/^(?!\/api).*/, (req, res) => {
+    res.sendFile(indexPath);
+  });
+}
+
 app.listen(PORT, () => {
-  console.log(`🚀 News server running on http://localhost:${PORT}`);
+  console.log(`🚀 News server running on port ${PORT}`);
+  if (hasClientBuild) {
+    console.log(`📦 Serving frontend build from ${distPath}`);
+  }
 });
