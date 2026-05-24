@@ -1,16 +1,19 @@
-# React + Vite
+# 🎮 PROSETUP — Esports Settings & Gear Aggregator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PROSETUP** — це автоматизований веб-хаб, який збирає, аналізує та візуалізує налаштування професійних кіберспортсменів (CS2, Valorant, Dota 2) та їхню периферію. 
 
-Currently, two official plugins are available:
+Цей проєкт розроблено як MVP в рамках університетського курсу з Web-технологій. Він вирішує проблему фрагментації даних, пропонуючи автоматизований пайплайн оновлення ігрових конфігурацій та агрегацію кіберспортивних новин.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Ключовий функціонал (MVP Features)
+- **Централізована база гравців:** Доступ до профілів топ-гравців (DPI, Sensitivity, Resolution, Crosshair).
+- **Автоматизований Data Pipeline (CFG Parser):** Кастомний парсер на Node.js, що зчитує оригінальні `.cfg` файли через регулярні вирази (Regex) та автоматично розраховує eDPI.
+- **HLTV News Feed:** Інтеграція новин кіберспорту через власний проксі-сервер (обхід Cloudflare) із системою кешування (15 хв) та Fallback-механізмом.
+- **Gear Analytics:** Статистика та рейтинг найпопулярніших девайсів (мишки, монітори) серед професіоналів.
+- **Smart Search & Filters:** Миттєвий пошук гравців за нікнеймом або ігровою дисципліною.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Технологічний стек
+- **Frontend:** React.js, Vite
+- **Backend (Proxy & Parser):** Node.js, Express.js
+- **Styling:** CSS Modules
+- **Code Quality:** ESLint, Stylelint
+- **Data Storage:** JSON (MVP Data Layer)
