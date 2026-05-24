@@ -78,11 +78,11 @@ const NewsFeed = () => {
         </div>
         <a
           className={styles.viewAll}
-          href="https://www.hltv.org/news"
+          href="https://www.hltv.org/"
           target="_blank"
           rel="noreferrer"
         >
-          Всі новини
+          Всі новини  
         </a>
       </div>
 
