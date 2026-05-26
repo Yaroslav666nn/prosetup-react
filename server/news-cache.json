@@ -1,8 +1,28 @@
 [
   {
+    "link": "/news/44710/short-news-week-21",
+    "title": "Short news: Week 21 ",
+    "comments": 17,
+    "date": 1779667200000,
+    "country": {
+      "name": "Other",
+      "code": "WORLD"
+    }
+  },
+  {
+    "link": "/news/44709/fluxo-confirm-dav1deus-and-ltz-signings",
+    "title": "Fluxo confirm dav1deuS and Ltz signings ",
+    "comments": 35,
+    "date": 1779667200000,
+    "country": {
+      "name": "Brazil",
+      "code": "BR"
+    }
+  },
+  {
     "link": "/news/44708/cast-your-vote-for-the-major-mvp-medal-design",
     "title": "Cast your vote for the Major MVP medal design ",
-    "comments": 162,
+    "comments": 223,
     "date": 1779667200000,
     "country": {
       "name": "Germany",
@@ -12,7 +32,7 @@
   {
     "link": "/news/44649/short-news-week-20",
     "title": "Short news: Week 20 ",
-    "comments": 276,
+    "comments": 279,
     "date": 1779667200000,
     "country": {
       "name": "Other",
@@ -22,7 +42,7 @@
   {
     "link": "/news/44707/esl-announces-iem-beijing-2026",
     "title": "ESL announces IEM Beijing 2026 ",
-    "comments": 61,
+    "comments": 94,
     "date": 1779667200000,
     "country": {
       "name": "China",
@@ -32,11 +52,11 @@
   {
     "link": "/news/44706/hext-i-think-cxzi-brings-some-things-peeping-was-lacking",
     "title": "HexT: \"I think Cxzi brings some things Peeping was lacking\" ",
-    "comments": 41,
+    "comments": 53,
     "date": 1779667200000,
     "country": {
-      "name": "United States",
-      "code": "US"
+      "name": "Canada",
+      "code": "CA"
     }
   },
   {
@@ -52,7 +72,7 @@
   {
     "link": "/news/44704/wildcard-defeat-fokus-to-win-bc-game-masters-championship-season-2",
     "title": "Wildcard defeat FOKUS to win BC Game Masters Championship Season 2 ",
-    "comments": 35,
+    "comments": 38,
     "date": 1779580800000,
     "country": {
       "name": "Portugal",
@@ -62,7 +82,7 @@
   {
     "link": "/news/44703/sangal-put-patsi-and-clax-up-for-transfer",
     "title": "Sangal put Patsi and clax up for transfer ",
-    "comments": 38,
+    "comments": 39,
     "date": 1779580800000,
     "country": {
       "name": "Russia",
@@ -72,7 +92,7 @@
   {
     "link": "/news/44702/latto-both-wins-are-special-but-this-one-has-a-little-extra-to-it-because-we-faced-falcons-a-team-i-really-respect",
     "title": "latto: \"Both wins are special, but this one has a little extra to it because we faced Falcons, a team I really respect\" ",
-    "comments": 39,
+    "comments": 40,
     "date": 1779580800000,
     "country": {
       "name": "Brazil",
@@ -82,7 +102,7 @@
   {
     "link": "/news/44701/latto-goes-back-to-back-with-second-cac-mvp",
     "title": "latto goes back-to-back with second CAC MVP ",
-    "comments": 68,
+    "comments": 72,
     "date": 1779580800000,
     "country": {
       "name": "Brazil",
@@ -92,7 +112,7 @@
   {
     "link": "/news/44700/legacy-defend-cac-title-with-upset-over-falcons",
     "title": "Legacy defend CAC title with upset over Falcons ",
-    "comments": 169,
+    "comments": 176,
     "date": 1779580800000,
     "country": {
       "name": "China",
@@ -122,7 +142,7 @@
   {
     "link": "/news/44698/torzsi-we-got-ten-wins-with-the-new-lineup-in-the-last-two-weeks-and-were-proud-of-that",
     "title": "torzsi: \"We got ten wins with the new lineup in the last two weeks, and we're proud of that\" ",
-    "comments": 40,
+    "comments": 41,
     "date": 1779580800000,
     "country": {
       "name": "Hungary",
@@ -242,7 +262,7 @@
   {
     "link": "/news/44687/the-mongolz-into-cac-playoffs-as-parivision-crisis-continues",
     "title": "The MongolZ into CAC playoffs as PARIVISION crisis continues ",
-    "comments": 61,
+    "comments": 62,
     "date": 1779408000000,
     "country": {
       "name": "China",
@@ -322,7 +342,7 @@
   {
     "link": "/news/44678/lake-on-major-chances-we-just-gotta-iron-some-stuff-out-and-i-think-well-make-a-good-run",
     "title": "Lake on Major chances: \"We just gotta iron some stuff out, and I think we'll make a good run\" ",
-    "comments": 23,
+    "comments": 24,
     "date": 1779321600000,
     "country": {
       "name": "United States",
@@ -622,7 +642,7 @@
   {
     "link": "/news/44646/navi-sweep-gamerlegion-to-claim-second-trophy-of-the-year-at-iem-atlanta",
     "title": "NAVI sweep GamerLegion to claim second trophy of the year at IEM Atlanta ",
-    "comments": 65,
+    "comments": 66,
     "date": 1778976000000,
     "country": {
       "name": "United States",
@@ -862,7 +882,7 @@
   {
     "link": "/news/44622/navi-break-vitalitys-semi-final-streak-in-atlanta",
     "title": "NAVI break Vitality's semi-final streak in Atlanta ",
-    "comments": 141,
+    "comments": 142,
     "date": 1778889600000,
     "country": {
       "name": "United States",
